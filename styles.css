@@ -1,0 +1,15 @@
+nav {
+    float: left;
+    width: 100%;
+    max-width: 1390px;
+    height: 100px; /* only for demonstration, should be removed */
+    background: rgb(103, 169, 231);
+    padding: 20px;
+    text-align: right;
+  }
+
+nav a {
+    font-size: medium;
+    font-weight: bold;
+    font-style: italic;
+}
