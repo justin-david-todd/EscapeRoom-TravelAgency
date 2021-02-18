@@ -1,15 +1,171 @@
 nav {
-    float: left;
-    width: 100%;
-    max-width: 1390px;
-    height: 100px; /* only for demonstration, should be removed */
-    background: rgb(103, 169, 231);
-    padding: 20px;
-    text-align: right;
+  float: left;
+  width: 100%;
+  max-width: 1390px;
+  height: 15px; /* only for demonstration, should be removed */
+  background: rgb(103, 169, 231);
+  padding: 20px;
+  text-align: right;
+  margin-left: 10px;
+  margin-bottom: 20px;
   }
 
-nav a {
-    font-size: medium;
-    font-weight: bold;
-    font-style: italic;
+.menu {
+  width: 200px;
+  font: small-caps 24px bold;
+  position: relative;
+  top: -5px;
 }
+
+#logo {
+  position: absolute;
+  left: 100px;
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  width: 100%;
+  max-width: 1390px;
+  background-color: rgb(103, 169, 231);
+  margin-bottom: -30px; 
+}
+
+#headerStyle1 {
+  background-color: rgb(103, 169, 231);
+  height: 10px;
+  width: 100%;
+  max-width: 1390px;
+  margin: 5px;
+  margin-top: 0px;
+  margin-left: 20px;
+}
+
+#headerStyle2 {
+  background-color: rgb(103, 169, 231);
+  height: 10px;
+  width: 100%;
+  max-width: 1390px;
+  margin: 5px;
+  margin-left: 30;
+}
+
+#testimonials {
+  padding: 10px;
+}
+
+#travelTitle {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 45px;
+}
+
+.profile {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 200px;
+  width: 250px;
+  border: thick double rgb(103, 169, 231);
+}
+
+.subhead {
+  margin: 10px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.boxed {
+  margin: 0 auto;
+  border: thick double black;   
+  min-height: 230px;
+  max-width: 900px;
+  font-size: 24;
+  padding: 10px;
+}
+
+.carousel {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: auto;
+  width: 800px;
+  border: 10px solid black;
+}
+
+.carousel * {
+  box-sizing: border-box;
+}
+
+.slides {
+  transform-style: preserve-3d;
+}
+
+.slidephoto {
+  opacity: 0;
+  position: absolute;
+  top:0;
+  width: 100%;
+  margin: auto;
+  padding: 50px 30px;
+  z-index: 100;
+  transition: transform 1s, opacity 1s, z-index 1s;
+  border-color: rgb(103, 169, 231);
+}
+
+.slidephoto.first,
+.slidephoto.active {
+  opacity: 1;
+  position: relative;
+  z-index: 900;
+}
+
+.slidephoto.prev,
+.slidephoto.next {
+  z-index: 800;
+}
+
+.slidephoto.prev {
+  transform: translateX(-100%); 
+}
+
+.slidephoto.next {
+  transform: translateX(100%); 
+}
+
+.carousel__button--prev,
+.carousel__button--next {
+  position: absolute;
+  top:50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: #FFF;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  z-index: 1001; /* Sit on top of everything */
+  border: 1px solid black;
+}
+
+.carousel__button--prev {
+  left:0;
+}
+
+.carousel__button--next {
+  right:0;
+}
+  
+.carousel__button--prev::after{
+  content: "<";
+  font: 24px bold;
+  position: absolute;
+  top: 15%;
+  left:25%;
+}
+
+.carousel__button--next::after {
+  content: ">";
+  font: 24px bold;
+  position: absolute;
+  top: 15%;
+  left:35%;
+}
+
+

@@ -7,17 +7,68 @@
 	</head>
 	<body>
 		<header>
-			<h2>Travel Agency</h2>
+			<h2 id="travelTitle">Travel Agency</h2>
 		</header>
+		<div id="headerStyle1"></div>
+		<div id="headerStyle2"></div>
 		<section>
 			<nav>
-				<a href="homepage.html">Home</a>
-				<a href="aboutUs.html">About Us</a>
-				<a href="promotions.html">Promotions</a>
-				<a href="contactus.html">Contact Us</a>
+				<div id="logo"><a href="homepage.html">LOGO</a></div>
+				<a class="menu" href="homepage.html">Home</a>
+				<a class="menu" href="aboutUs.html">About Us</a>
+				<a class="menu" href="promotions.html">Promotions</a>
+				<a class="menu" href="contactus.html">Contact Us</a>		
 			</nav>
+		</section>
+
+		<div class="carousel">
+			<div class="slides">
+				<img class="slidePhoto first" src="assets/profile1.jpg" alt="photo1">
+				<img class="slidePhoto" src="assets/profile2.jpg" alt="photo2">
+				<img class="slidePhoto" src="assets/profile1.jpg" alt="photo3">
+				<img class="slidePhoto" src="assets/profile2.jpg" alt="photo4">
+				
+				<div class="carousel__button--next"></div>
+				<div class="carousel__button--prev"></div>
+			</div>
+		</div>		
+
+		<section id="testimonials">
+
+			<h3 class="subhead">Testimonials</h3>
+			<div class="boxed">
+				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
+					Dustin is a bit of a know it all. But he knows enough to really help you out!
+					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
+					No questions asked.	
+			</div>
+			<div class="boxed">
+				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
+					Dustin is a bit of a know it all. But he knows enough to really help you out!
+					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
+					No questions asked.	
+			</div>
+			<div class="boxed">
+				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
+					Dustin is a bit of a know it all. But he knows enough to really help you out!
+					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
+					No questions asked.	
+			</div>
+			<div class="boxed">
+				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
+					Dustin is a bit of a know it all. But he knows enough to really help you out!
+					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
+					No questions asked.	
+			</div>
 		</section>
 		<div></div>
 		<script src="homepage.js"></script>
+		<footer>
+			
+		</footer>
 	</body>
 </html>
+
+<!--
+	https://medium.com/@marcusmichaels/how-to-build-a-carousel-from-scratch-in-vanilla-js-9a096d3b98c9
+-->
