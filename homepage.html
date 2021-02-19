@@ -17,21 +17,24 @@
 				<a class="menu" href="homepage.html">Home</a>
 				<a class="menu" href="aboutUs.html">About Us</a>
 				<a class="menu" href="promotions.html">Promotions</a>
-				<a class="menu" href="contactus.html">Contact Us</a>		
+				<a class="menu" href="contactus.html">Contact Us</a>
+				<a class="menu" href="test.html">TEST</a>			
 			</nav>
 		</section>
-
-		<div class="carousel">
-			<div class="slides">
-				<img class="slidePhoto first" src="assets/profile1.jpg" alt="photo1">
-				<img class="slidePhoto" src="assets/profile2.jpg" alt="photo2">
-				<img class="slidePhoto" src="assets/profile1.jpg" alt="photo3">
-				<img class="slidePhoto" src="assets/profile2.jpg" alt="photo4">
-				
-				<div class="carousel__button--next"></div>
-				<div class="carousel__button--prev"></div>
+		<section>
+			<div class="carousel">
+				<div class="slides">
+					<img class="slidePhoto first" src="assets/profile1.jpg" alt="photo1">
+					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo2">
+					<img class="slidePhoto" src="assets/profile1.jpg" alt="photo3">
+					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo4">
+					
+					<div id="carousel__button--next"></div>
+					<div id="carousel__button--prev"></div>
+				</div>
 			</div>
-		</div>		
+			<div id="carouselBubbles">. . . .</div>	
+		</section>
 
 		<section id="testimonials">
 
@@ -63,6 +66,20 @@
 		</section>
 		<div></div>
 		<script src="homepage.js"></script>
+
+		<section id="responseBox">
+			<div>
+				<fieldset >
+					<form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="POST">
+						<br>
+						<label for="feedback" id="feedbackLabel">Are you enjoying yourself? Completely lost?<br>Please let us know!</label><br><br>
+						<textarea type="text" id="feedback" name="feedback"></textarea><br>
+						<input type="submit" id="submitFeedback" value="Submit Feedback">
+					</form>
+				</fieldset>
+			</div>
+		</section>
+		
 		<footer>
 			
 		</footer>
