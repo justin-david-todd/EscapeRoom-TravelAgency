@@ -237,3 +237,15 @@ header {
   top: -20%;
   left: 10%;
 }
+
+.rightColumn {
+  float: right;
+  width: 700px;
+}
+
+.leftColumn {
+  float: left;
+  position: relative;
+  width: 600px;
+  left: 50px;
+}
