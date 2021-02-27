@@ -1,6 +1,3 @@
-/**Governs control of the Calendar Puzzle
- * 
-*/
 // retrieves each row in the calendar
 var weeks = document.getElementsByClassName("week");
 
@@ -74,8 +71,8 @@ function revealCalendar(){
     for (let i=0; i<weeks.length; i++){
         for (let j=0; j<weeks[i].children.length; j++){
             let day = weeks[i].children[j];
-            if (day.id != "3:4" && day.id != "1:1"){
-                day.textContent = "  ";
+            if (day.id != "3:4" && day.id != "1:1" && day.id != "2:2"){
+                day.textContent = " X ";
             }
             
         }
@@ -145,16 +142,16 @@ class comboLock{
     }
 }
 
-/**Uses comboLock Class to create a combination lock for the Home Page solution. 
+/**Uses comboLock Class to create a combination lock for the Promotions page solution. 
  * Each button increments its own number value.
  * If the combination value is correct and the "Check" button is clicked,
  *  the lock disappears and reveals a hidden message.
 */
-var homeLock = new comboLock(1, 2, 3, 4);
+var homeLock = new comboLock(2, 4, 9, 1, 7);
 
-var homeLockNums = document.getElementsByClassName("homeCombo");
+var homeLockNums = document.getElementsByClassName("promoCombo");
 
-/**Updates the number displayed on the home combination lock */
+/**Updates the number displayed on the combination lock */
 function updateLockNums(){
     for(let i=0; i<homeLockNums.length; i++){
         homeLockNums[i].textContent = homeLock.currentCombo[i];
@@ -164,16 +161,16 @@ function updateLockNums(){
 /**Reveals secret message for when lock is open*/
 function revealHomeLock(){
     var lock = document.getElementById("homeLockTitle");
-    lock.textContent = "All of the judges give the pirate's booty a 10/10/10.";  // The all of the judges give the pirate's booty a 10/10.
+    lock.textContent = "Secret Message.";  // Secret Message.
     lock.style.left  = "10px";
     var lockContents = document.getElementsByClassName("lock");
     for(let i=0; i< lockContents.length; i++){
         lockContents[i].textContent ="";
     }
-
+    alert("You solved the Promotions Page!")
 } 
 
-// Sets initial display of buttons to 0-0-0-0.
+// Sets initial display of buttons to 0-0-0-0-0.
 updateLockNums()
 
 // Adds an incrementing function to each button on click.
@@ -191,6 +188,9 @@ for(let i=0; i<homeLockNums.length; i++){
         case 3:
             homeLockNums[i].addEventListener("click", homeLock.makeInc(3).bind(homeLock));
             break;
+        case 4:
+            homeLockNums[i].addEventListener("click", homeLock.makeInc(4).bind(homeLock));
+            break;
     }
 }
 
@@ -204,9 +204,7 @@ document.getElementById("homeLock").addEventListener("click", updateLockNums)
 document.getElementById("checkHomeLock").addEventListener("click", ()=>{
     if(homeLock.checkSolution()){
         revealHomeLock();
-    }//else{ // For some reason displaying this message disables the "check" button.
-       // document.getElementById("homeLockMsg").textContent = "Incorrect. Try Again." 
-    //}
+    }else{ 
+        alert("That's not right.");
+    }
 })
-
-

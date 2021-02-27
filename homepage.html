@@ -6,28 +6,54 @@
 		<title>Travel AgencY - HomePage</title>
 	</head>
 	<body>
+
+		<!--Company Logo-->
 		<header>
 			<h2 id="travelTitle">Travel Agency</h2>
 		</header>
 		<div id="headerStyle1"></div>
 		<div id="headerStyle2"></div>
+
+		<!--Horizontal Navigation Menu-->
 		<section>
 			<nav>
 				<div id="logo"><a href="homepage.html">LOGO</a></div>
 				<a class="menu" href="homepage.html">Home</a>
 				<a class="menu" href="aboutUs.html">About Us</a>
 				<a class="menu" href="promotions.html">Promotions</a>
-				<a class="menu" href="contactus.html">Contact Us</a>
-				<a class="menu" href="test.html">TEST</a>			
+				<a class="menu" href="contactus.html">Contact Us</a>		
 			</nav>
 		</section>
+
+		<!--Combination Lock-->
+		<div class="rightColumn" id="homeLock">
+			<h3 id="homeLockTitle">HomePage</h3></br>
+			<button class="homeCombo lock"></button>
+			<button class="homeCombo lock"></button>
+			<button class="homeCombo lock"></button>
+			<button class="homeCombo lock"></button></br>
+			<button id="checkHomeLock" class="lock">Check</button></br>
+			<p id="homeLockMsg" class="lock"></p>
+		</div>
+
+		<!--Page Title-->
+		<section>
+			<h1 class="center title"> Welcome to Travel Agency</h1>
+			<h2 class="center">The site for all your vacationing needs.</h2>
+		</section>
+
+		<!--Picture Carousel-->
 		<section>
 			<div class="carousel">
 				<div class="slides">
 					<img class="slidePhoto first" src="assets/profile1.jpg" alt="photo1">
 					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo2">
 					<img class="slidePhoto" src="assets/profile1.jpg" alt="photo3">
-					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo4">
+					<img class="slidePhoto" id="horse" src="assets/profile2.jpg" alt="photo4">
+					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo5">
+					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo6">
+					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo7">
+					<img class="slidePhoto" src="assets/profile2.jpg" alt="photo8">
 					
 					<div id="carousel__button--next"></div>
 					<div id="carousel__button--prev"></div>
@@ -36,37 +62,43 @@
 			<div id="carouselBubbles">. . . .</div>	
 		</section>
 
+		<!--Customer Testimonials-->
 		<section id="testimonials">
 
 			<h3 class="subhead">Testimonials</h3>
 			<div class="boxed">
 				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
-					Dustin is a bit of a know it all. But he knows enough to really help you out!
+					My agent Dustin is a bit of a know it all. But he knows enough to really help you out!
 					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
 					No questions asked.	
 			</div>
 			<div class="boxed">
 				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
-					Dustin is a bit of a know it all. But he knows enough to really help you out!
-					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
-					No questions asked.	
+					My favorite part of the whole trip was the carousel. However, I noticed something funny when I 
+					clicked the horse too many times. 	
 			</div>
 			<div class="boxed">
 				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
-					Dustin is a bit of a know it all. But he knows enough to really help you out!
-					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
-					No questions asked.	
+					At the top of each page is a lock. I didn't manage to it open, but my agent told me
+					that if I did, then it was time to move onto the next page.
 			</div>
 			<div class="boxed">
 				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
-					Dustin is a bit of a know it all. But he knows enough to really help you out!
-					Don't be afraid to ask him absolutely anything. He will absolutely 100% be able to answer your question.
-					No questions asked.	
+					I know the puzzles aren't the best, but I still head fun. To be honest, it's their first
+					website, so all things considered it's not so bad!
+			</div>
+
+			<!--Fixed "New Message" Box-->
+			<div id="newMessage">
+				1 New Message. 
+				<a href="/assets/Letter.txt" id="downloadPDF" download>
+					Click Here
+				</a>
 			</div>
 		</section>
 		<div></div>
-		<script src="sources/homepage.js"></script>
 
+		<!--Form for User Feedback-->
 		<section id="responseBox">
 			<div>
 				<fieldset >
@@ -80,9 +112,13 @@
 			</div>
 		</section>
 		
+		<!--Page Footer-->
 		<footer>
 			
 		</footer>
+
+		<!--Runs JavaScript for page-->
+		<script src="sources/homepage.js"></script>
 	</body>
 </html>
 

@@ -179,6 +179,15 @@ header {
   font-weight: bolder;
 }
 
+.promoCombo {
+  height: 50px;
+  width: 30px;
+  font: 20px bold;
+  position: relative;
+  left: 5%;
+  top: -20%;
+}
+
 #responseBox {
   width: 600px;
   margin: auto;
@@ -198,6 +207,8 @@ header {
 
 #calendar {
   border: 1px solid;
+  width: auto;
+  font-size: 40px;
 }
 
 #homeLock {
@@ -211,23 +222,22 @@ header {
 
 #homeLockTitle{
   position: relative;
-  top: 20px;
-  left: 70px;
+  left: 80px;
 }
 
 .homeCombo {
   height: 50px;
   width: 30px;
-  align-content: center;
   font: 20px bold;
   position: relative;
   left: 10%;
+  top: -20%;
 }
 
 #checkHomeLock {
   position: relative;
-  top: 5px;
   left: 53%;
+  top: -10%;
 }
 
 #homeLockMsg {
@@ -243,9 +253,44 @@ header {
   width: 700px;
 }
 
+.clear {
+  clear: right;
+}
+
 .leftColumn {
   float: left;
   position: relative;
   width: 600px;
   left: 50px;
+}
+
+.thin {
+  width: 400px;
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+}
+
+#newMessage {
+  position: fixed;
+  right:0;
+  bottom: 0;
+  padding: 10px;
+  width: 250px;
+  height: 30px;
+  background-color: blue;
+  color: red;
+  font:  24px;
+  text-align: center;
+}
+
+#downloadPDF {
+  font: 24px;
+  color: white;
+  text-decoration: underline;
 }
