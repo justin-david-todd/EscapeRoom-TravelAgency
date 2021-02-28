@@ -1,3 +1,76 @@
+
+
+/** The List Puzzle */
+var listContents = [
+    "I like to eat as much as I can when I'm on vacation. Those calories don't count!", // 0
+    "Don't bring your kids. If you have to bring them, establish clear ground rules.", // 1
+    "If you don't want to go anywhere, stay at home and play boardgames.", // 2
+    "Vacation? Just code. Keep coding.", // 3
+    "Spend lots of money. This is our unbiased opinion.", // 4
+    "Do you ever feel like most of this text is just filler?", // 5
+    "Just. Make. The. Most. Of. It.", // 6
+    "The letters 'M', 'T', 'W', 'R', and 'F' all correspond to a day of the week.", // 7 (Clue)
+    "It can be hard to find those 'treasured' moments during the work week. But if you search hard enough you can find them! ", // 8 (Clue)
+    "Remember when looking for treasure, a big yellow 'x' marks the spot.", // 9 (Clue)
+    "Try marking the calendar. How should you mark it?", // 10 (Clue)
+]
+
+var listItems = document.getElementsByClassName("listPuzzle");
+var listShuffle = 0;
+var shuffleLock = false;
+
+function initList() {
+    for (var i=0; i < 8; i++) {
+    listItems[i].textContent = listContents[i]
+    }
+}
+
+function shuffleList(){
+    listShuffle += 1;
+    if (listShuffle > 3){
+        listShuffle = 0;
+    }
+    switch(listShuffle){
+        case 0:
+            initList();
+            break;
+        case 1:
+            listItems[0].textContent = listContents[4]
+            listItems[1].textContent = listContents[8]
+            listItems[2].textContent = listContents[6]
+            listItems[3].textContent = listContents[2]
+            listItems[4].textContent = listContents[0]
+            listItems[5].textContent = listContents[3]
+            listItems[6].textContent = listContents[1]
+            listItems[7].textContent = listContents[5]
+            break;
+        case 2:
+            listItems[0].textContent = listContents[6]
+            listItems[1].textContent = listContents[5]
+            listItems[2].textContent = listContents[3]
+            listItems[3].textContent = listContents[1]
+            listItems[4].textContent = listContents[9]
+            listItems[5].textContent = listContents[2]
+            listItems[6].textContent = listContents[4]
+            listItems[7].textContent = listContents[0]
+            break;
+        case 3:
+            listItems[0].textContent = listContents[10]
+            listItems[1].textContent = listContents[6]
+            listItems[2].textContent = listContents[5]
+            listItems[3].textContent = listContents[2]
+            listItems[4].textContent = listContents[3]
+            listItems[5].textContent = listContents[0]
+            listItems[6].textContent = listContents[1]
+            listItems[7].textContent = listContents[4]
+            break;
+    }
+}
+
+// Fills in list with starting contents.
+initList();
+
+/** The Calendar Puzzle */
 // retrieves each row in the calendar
 var weeks = document.getElementsByClassName("week");
 
@@ -77,6 +150,7 @@ function revealCalendar(){
             
         }
     } 
+    alert("X marks the spot!")
 }
 
 /**Class for combination lock. Creates a combination lock with a solution combination
@@ -160,7 +234,7 @@ function updateLockNums(){
 
 /**Reveals secret message for when lock is open*/
 function revealHomeLock(){
-    var lock = document.getElementById("homeLockTitle");
+    var lock = document.getElementById("promoLockTitle");
     lock.textContent = "Secret Message.";  // Secret Message.
     lock.style.left  = "10px";
     var lockContents = document.getElementsByClassName("lock");
@@ -195,16 +269,107 @@ for(let i=0; i<homeLockNums.length; i++){
 }
 
 // Updates the number display of the combination lock after each button click.
-document.getElementById("homeLock").addEventListener("click", updateLockNums)
+document.getElementById("promoLock").addEventListener("click", updateLockNums)
 
 /**  Checks for correct combination when "Check" button is clicked; 
  * If so, reveals secret message.
  * xxxdeletedxxx Else, gives a try again message.
 */
-document.getElementById("checkHomeLock").addEventListener("click", ()=>{
+document.getElementById("checkPromoLock").addEventListener("click", ()=>{
     if(homeLock.checkSolution()){
         revealHomeLock();
     }else{ 
         alert("That's not right.");
+    }
+})
+
+/** Feature to unlock the puzzles for the new page */
+var unlockPuzzles = 0;
+
+function readyPuzzles(){
+    shuffleLock = true;
+    alert("Something feels different. Try pressing 'Enter'.");
+}
+
+document.addEventListener("keydown", function(e){
+    var y = e.key;
+        switch (y) {
+        case "1":
+            if (unlockPuzzles == 0) {
+                unlockPuzzles += 1;
+            }
+            break;
+        case "8":
+            if (unlockPuzzles == 1) {
+                unlockPuzzles += 1;
+            }
+            break;
+        case "2":
+            if (unlockPuzzles == 2) {
+                unlockPuzzles += 1;
+            }
+            break;
+        case "0":
+            if (unlockPuzzles == 3) {
+                readyPuzzles();
+            }
+            break;
+        default:
+            unlockPuzzles = 0;
+            break;
+    }
+})
+
+
+/** The "Give Up" feature */
+var unlockAll = 0;
+
+function autoSolve(){
+    alert("Because you gave up, \nI unlocked everything for you."); // displays cheat message.
+    revealCalendar()
+    revealHomeLock()  // unlocks HomePage comboLock
+}
+
+document.addEventListener("keydown", function(e){
+    var x = e.key;
+        switch (x) {
+        case "Enter":  // used by listPuzzle to change the contents of the list.
+            if(shuffleLock){
+                shuffleList();
+            }
+            break;
+        case "i":
+            if (unlockAll == 0 || unlockAll == 2) {
+                unlockAll += 1;
+            }
+            break;
+        case "g":
+            if (unlockAll == 1) {
+                unlockAll += 1;
+            }
+            break;
+        case "v":
+            if (unlockAll == 3) {
+                unlockAll += 1;
+            }
+            break;
+        case "e":
+            if (unlockAll == 4) {
+                unlockAll += 1;
+            }
+            break;
+        case "u":
+            if (unlockAll == 5) {
+                unlockAll += 1;
+            }
+            break;
+        case "p":
+            if (unlockAll == 6) {
+                autoSolve();
+            }
+            break;
+        default:
+            unlockAll = 0;
+            break;
     }
 })

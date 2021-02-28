@@ -155,6 +155,7 @@ function breakCarousel(){
     if (breakCount > 9) {
         carouselBubbleSequence = brokenBubbleSequence;
         alert("Something is wrong with the carousel.")
+        updateBubbles()
     }
 }
 
@@ -242,7 +243,7 @@ function updateLockNums(){
 /**Reveals secret message for when lock is open*/
 function revealHomeLock(){
     var lock = document.getElementById("homeLockTitle");
-    lock.textContent = "All of the judges give the pirate's booty a 10/10/10.";  // The all of the judges give the pirate's booty a 10/10.
+    lock.textContent = "Type '101010' on the next page.";  // The all of the judges give the pirate's booty a 10/10.
     lock.style.left  = "10px";
     var lockContents = document.getElementsByClassName("lock");
     for(let i=0; i< lockContents.length; i++){
@@ -282,10 +283,12 @@ document.getElementById("homeLock").addEventListener("click", updateLockNums)
 document.getElementById("checkHomeLock").addEventListener("click", ()=>{
     if(homeLock.checkSolution()){
         revealHomeLock();
-    }//else{ // For some reason displaying this message disables the "check" button.
-       // document.getElementById("homeLockMsg").textContent = "Incorrect. Try Again." 
-    //}
+    }else{ 
+        alert("That's not right.");
+    }
 })
+
+/** The "Give Up" feature */
 
 var unlockAll = 0;
 

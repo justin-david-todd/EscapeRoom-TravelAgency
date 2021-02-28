@@ -7,13 +7,13 @@
 	</head>
 	<body>
 		<header>
-			<h2 id="travelTitle">Travel Agency</h2>
+			<h2 class="travelTitle">Travel Agency</h2>
 		</header>
-		<div id="headerStyle1"></div>
-		<div id="headerStyle2"></div>
+		<div class="headerStyle1"></div>
+		<div class="headerStyle2"></div>
 		<section>
 			<nav>
-				<div id="logo">LOGO</div>
+				<div class="logo" id="logo">LOGO</div>
 				<a class="menu" href="homepage.html">Home</a>
 				<a class="menu" href="aboutUs.html">About Us</a>
 				<a class="menu" href="promotions.html">Promotions</a>
@@ -23,7 +23,50 @@
 		<section>
 			<h1 class="center title">Contact Us</h1>
 		</section>
-		<div></div>
-		<script src="homepage.js"></script>
+
+		<section class="center contacts">
+			Talk to us! We're listening.<br>
+			(Unless we're on vacation)
+			<div class="submitEnd">
+				<fieldset >
+					<form action="http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php" method="POST">
+						<br>
+						<label for="name" >Name</label>
+						<input type="text" name="name"><br>
+						<label for="email" >Email</label>
+						<input type="text" name="email"><br>
+						<label for="phone" >Phone</label>
+						<input type="text" name="phone"><br>
+						<label for="message" id="msgLabel">Message:          </label><br>
+						<textarea type="message" name="name" id="finalMessage"></textarea><br>
+						<input type="submit" id="endGame" value="-- Send --">
+					</form>
+				</fieldset>
+			</div>
+			<br>
+			<br>
+			<h2 class="travelTitle">Travel Agency</h2>
+			<br>
+			1234 Absolutely Real St. #24B, North Pole, CO 90210
+			<br>
+			<br>
+			555-555-5555
+			<br>
+
+		</section>
+
+		<!--Page Footer-->
+		<footer>
+			<div class="footDiv">
+				<a class="menu" href="homepage.html">Home</a>
+				<a class="menu" href="aboutUs.html">About Us</a>
+				<a class="menu" href="promotions.html">Promotions</a>
+				<a class="menu" href="contactus.html">Contact Us</a><br>
+				<a class="menu" href="https://www.indeed.com/">Careers</a><br><br>
+			@copyyrite 2099 by No Trademark Whatsoever Inc.
+			</div>
+		</footer>
+
+		<script src="sources/contactus.js"></script>
 	</body>
 </html>

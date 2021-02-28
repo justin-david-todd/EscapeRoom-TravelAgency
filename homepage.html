@@ -6,18 +6,18 @@
 		<title>Travel AgencY - HomePage</title>
 	</head>
 	<body>
-
+		<div class="page">
 		<!--Company Logo-->
 		<header>
-			<h2 id="travelTitle">Travel Agency</h2>
+			<h2 class="travelTitle">Travel Agency</h2>
 		</header>
-		<div id="headerStyle1"></div>
-		<div id="headerStyle2"></div>
+		<div class="headerStyle1"></div>
+		<div class="headerStyle2"></div>
 
 		<!--Horizontal Navigation Menu-->
 		<section>
 			<nav>
-				<div id="logo"><a href="homepage.html">LOGO</a></div>
+				<div class="logo"><a href="homepage.html">LOGO</a></div>
 				<a class="menu" href="homepage.html">Home</a>
 				<a class="menu" href="aboutUs.html">About Us</a>
 				<a class="menu" href="promotions.html">Promotions</a>
@@ -26,7 +26,7 @@
 		</section>
 
 		<!--Combination Lock-->
-		<div class="rightColumn" id="homeLock">
+		<div id="homeLock">
 			<h3 id="homeLockTitle">HomePage</h3></br>
 			<button class="homeCombo lock"></button>
 			<button class="homeCombo lock"></button>
@@ -84,14 +84,14 @@
 			</div>
 			<div class="boxed">
 				<img class="profile" src="assets/profile1.jpg" alt="profile pic">
-					I know the puzzles aren't the best, but I still head fun. To be honest, it's their first
+					I know the puzzles aren't the best, but I still had fun. To be honest, it's their first
 					website, so all things considered it's not so bad!
 			</div>
 
 			<!--Fixed "New Message" Box-->
 			<div id="newMessage">
 				1 New Message. 
-				<a href="/assets/Letter.txt" id="downloadPDF" download>
+				<a href="assets/letter.pdf" id="downloadPDF" download=>
 					Click Here
 				</a>
 			</div>
@@ -114,11 +114,19 @@
 		
 		<!--Page Footer-->
 		<footer>
-			
+			<div class="footDiv">
+				<a class="menu" href="homepage.html">Home</a>
+				<a class="menu" href="aboutUs.html">About Us</a>
+				<a class="menu" href="promotions.html">Promotions</a>
+				<a class="menu" href="contactus.html">Contact Us</a><br>
+				<a class="menu" href="https://www.indeed.com/">Careers</a><br><br>
+			@copyyrite 2099 by No Trademark Whatsoever Inc.
+			</div>
 		</footer>
 
 		<!--Runs JavaScript for page-->
 		<script src="sources/homepage.js"></script>
+	</div>
 	</body>
 </html>
 

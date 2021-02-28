@@ -1,7 +1,30 @@
+/*I apologize for the long CSS file. I didn't learn about naming conventions until 
+  halfway through the project and by then it was too late.
+*/
+
+/* Styles for specific Elements (mostly for the menu) */
+
+body {
+  width: 1400px;
+}
+
+footer {
+  background: rgb(103, 169, 231);
+  height: 300px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.footDiv {
+  position: relative;
+  margin: 0;
+  top: 150px;
+}
+
 nav {
   float: left;
   width: 100%;
-  max-width: 1390px;
+  max-width: 1350px;
   height: 15px; /* only for demonstration, should be removed */
   background: rgb(103, 169, 231);
   padding: 20px;
@@ -11,56 +34,104 @@ nav {
   }
 
 section {
-  max-width: 1400px;;
-}
-
-.menu {
-  width: 200px;
-  font: small-caps 24px bold;
-  position: relative;
-  top: -5px;
-}
-
-#logo {
-  position: absolute;
-  left: 100px;
-  cursor: pointer;
+  max-width: 1300px;;
 }
 
 header {
   text-align: center;
   width: 100%;
-  max-width: 1390px;
+  max-width: 1350px;
   background-color: rgb(103, 169, 231);
   margin-bottom: -30px; 
 }
 
-#headerStyle1 {
+/* General Classes */
+.menu {
+  width: 200px;
+  font: small-caps 24px bold;
+  position: relative;
+  top: -5px;
+  left: -20px;
+}
+
+.rightColumn {
+  float: right;
+  width: 700px;
+}
+
+.clear {
+  clear: right;
+}
+
+.leftColumn {
+  float: left;
+  position: relative;
+  width: 600px;
+  left: 50px;
+}
+
+.thin {
+  width: 400px;
+}
+
+.center {
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+}
+
+.logo {
+  position: absolute;
+  left: 100px;
+  cursor: pointer;
+}
+
+.contacts {
+  font-size: 28px;
+}
+
+.submitEnd {
+  position: relative;
+  top: 40px;
+  left: 340px;
+  width:600px;
+}
+
+/* Styles by ID - Menu/Header */
+
+.headerStyle1 {
   background-color: rgb(103, 169, 231);
   height: 10px;
   width: 100%;
-  max-width: 1390px;
+  max-width: 1300px;
   margin: 5px;
   margin-top: 0px;
   margin-left: 20px;
 }
 
-#headerStyle2 {
+.headerStyle2 {
   background-color: rgb(103, 169, 231);
   height: 10px;
   width: 100%;
-  max-width: 1390px;
+  max-width: 1300px;
   margin: 5px;
   margin-left: 30;
 }
 
-#testimonials {
-  padding: 10px;
-}
-
-#travelTitle {
+.travelTitle {
   font-family: 'Courier New', Courier, monospace;
   font-size: 45px;
+}
+
+.page {
+  max-width: 1500px;
+}
+
+/* Styles by ID - HomePage */
+#testimonials {
+  padding: 10px;
 }
 
 .profile {
@@ -206,23 +277,61 @@ header {
 }
 
 #calendar {
+  position: relative;
+  top: 50px;
   border: 1px solid;
   width: auto;
   font-size: 40px;
 }
 
-#homeLock {
+#promoLock {
+  position: absolute;
+  top: 200px;
+  right: 0;
   width: 300px;
   height: 150px;
   border: 10px black;
   border-radius: 25px;
   background-color: gray;
   align-content: center;
+  z-index: 100;
+}
+
+#promoLockTitle{
+  position: relative;
+  left: 80px;
+}
+
+#promoLockMsg {
+  font: 11px bold;
+  color: red;
+  position: relative;
+  top: -20%;
+  left: 10%;
+}
+
+#homeLock {
+  position: absolute;
+  top: 170px;
+  right: 0;
+  width: 300px;
+  height: 150px;
+  border: 10px black;
+  border-radius: 25px;
+  background-color: gray;
+  align-content: center;
+  z-index: 100;
 }
 
 #homeLockTitle{
   position: relative;
   left: 80px;
+}
+
+#checkPromoLock {
+  position: relative;
+  left: 53%;
+  top: -10%;
 }
 
 .homeCombo {
@@ -248,9 +357,28 @@ header {
   left: 10%;
 }
 
+#newMessage {
+  position: fixed;
+  right:0;
+  bottom: 0;
+  padding: 10px;
+  width: 250px;
+  height: 30px;
+  background-color: blue;
+  color: red;
+  font:  24px;
+  text-align: center;
+}
+
+#downloadPDF {
+  font: 24px;
+  color: white;
+  text-decoration: underline;
+}
+
 .rightColumn {
   float: right;
-  width: 700px;
+  width: 600px;
 }
 
 .clear {
@@ -276,21 +404,13 @@ header {
   font-size: 50px;
 }
 
-#newMessage {
-  position: fixed;
-  right:0;
-  bottom: 0;
-  padding: 10px;
-  width: 250px;
-  height: 30px;
-  background-color: blue;
-  color: red;
-  font:  24px;
-  text-align: center;
+#msgLabel {
+  position: relative;
+  left: -75px;
 }
 
-#downloadPDF {
-  font: 24px;
-  color: white;
-  text-decoration: underline;
+#finalMessage {
+  height: 100px;
+  width: 250px;
 }
+
