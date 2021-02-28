@@ -235,7 +235,7 @@ function updateLockNums(){
 /**Reveals secret message for when lock is open*/
 function revealHomeLock(){
     var lock = document.getElementById("promoLockTitle");
-    lock.textContent = "Secret Message.";  // Secret Message.
+    lock.textContent = "Type the company 'Careers' links to.";  // Secret Message.
     lock.style.left  = "10px";
     var lockContents = document.getElementsByClassName("lock");
     for(let i=0; i< lockContents.length; i++){

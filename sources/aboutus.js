@@ -71,7 +71,8 @@ var unlockAll = 0;
 
 function autoSolve(){
     alert("Because you gave up, \nI unlocked everything for you."); // displays cheat message.
-    revealHomeLock()  // unlocks HomePage comboLock
+    readyPuzzles();  // Unlocks and Reveals hint for Arrow Puzzle.
+    solveAboutUs();  // Reveals clue for next page.
 }
 
 document.addEventListener("keydown", function(e){

@@ -132,6 +132,9 @@ header {
 /* Styles by ID - HomePage */
 #testimonials {
   padding: 10px;
+  height: 600px;
+  overflow: auto;
+  text-align:justify;
 }
 
 .profile {

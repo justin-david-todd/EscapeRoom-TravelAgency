@@ -47,3 +47,55 @@ document.addEventListener("keydown", function(e){
             break;
     }
 });
+
+/** The "Give Up" feature */
+var unlockAll = 0;
+
+function autoSolve(){
+    alert("Because you gave up, \nI unlocked everything for you."); // displays cheat message.
+    readyPuzzles(); //Unlocks link to congrats certificate.
+}
+
+document.addEventListener("keydown", function(e){
+    var x = e.key;
+        switch (x) {
+        case "Enter":  // used by listPuzzle to change the contents of the list.
+            if(shuffleLock){
+                shuffleList();
+            }
+            break;
+        case "i":
+            if (unlockAll == 0 || unlockAll == 2) {
+                unlockAll += 1;
+            }
+            break;
+        case "g":
+            if (unlockAll == 1) {
+                unlockAll += 1;
+            }
+            break;
+        case "v":
+            if (unlockAll == 3) {
+                unlockAll += 1;
+            }
+            break;
+        case "e":
+            if (unlockAll == 4) {
+                unlockAll += 1;
+            }
+            break;
+        case "u":
+            if (unlockAll == 5) {
+                unlockAll += 1;
+            }
+            break;
+        case "p":
+            if (unlockAll == 6) {
+                autoSolve();
+            }
+            break;
+        default:
+            unlockAll = 0;
+            break;
+    }
+})
