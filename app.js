@@ -6,5 +6,5 @@ app.use(express.static('public'));
 var port = 60633;
 
 app.listen(port, function() {
-    console.log(`listening on port ${port}!`)
+    console.log(`listening on port ${port}. Press CTRL + C to stop.`)
 });
