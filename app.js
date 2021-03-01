@@ -3,8 +3,8 @@ var app = express();
 
 app.use(express.static('public'));
 
-app.set('port', 60633);
+var port = 60633;
 
-app.listen(app.port, function() {
-    console.log(`listening on port ${app.port}!`)
+app.listen(port, function() {
+    console.log(`listening on port ${port}!`)
 });
