@@ -295,7 +295,7 @@ var unlockAll = 0;
 
 function autoSolve(){
     alert("Because you gave up, \nI unlocked everything for you."); // displays cheat message.
-    for(var i=0; i<10; i++){
+    for(var i=0; i<6; i++){
         breakCarousel()  // breaks the Carousel
     }
     revealHomeLock()  // unlocks HomePage comboLock

@@ -1,0 +1,19 @@
+{
+  "name": "travelagency",
+  "version": "1.0.0",
+  "description": "cs290 project travel agency escaperoom webpage",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin-david-todd/EscapeRoom-TravelAgency.git"
+  },
+  "author": "Justin David Todd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justin-david-todd/EscapeRoom-TravelAgency/issues"
+  },
+  "homepage": "https://github.com/justin-david-todd/EscapeRoom-TravelAgency#readme"
+}

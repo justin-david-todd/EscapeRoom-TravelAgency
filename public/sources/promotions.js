@@ -326,6 +326,7 @@ var unlockAll = 0;
 
 function autoSolve(){
     alert("Because you gave up, \nI unlocked everything for you."); // displays cheat message.
+    readyPuzzles()
     revealCalendar()
     revealHomeLock()  // unlocks HomePage comboLock
 }
