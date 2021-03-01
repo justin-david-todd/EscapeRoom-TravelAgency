@@ -139,7 +139,7 @@ function setUpCarousel(){
     setButtons();
     updateBubbles();
     // Causes carousel to autoscroll
-    setInterval(nextSlide, 10000);
+    setInterval(nextSlide, 6000);
 }
 
 setUpCarousel();
@@ -152,7 +152,7 @@ var horse = document.getElementById("horse");
 
 function breakCarousel(){
     breakCount += 1;
-    if (breakCount > 9) {
+    if (breakCount > 5) {
         carouselBubbleSequence = brokenBubbleSequence;
         alert("Something is wrong with the carousel.")
         updateBubbles()
