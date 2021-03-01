@@ -169,6 +169,7 @@ header {
   overflow: hidden;
   margin: auto;
   width: 800px;
+  height: 700px;
   border: 10px solid black;
 }
 
