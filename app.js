@@ -1,5 +1,4 @@
 var app = express();
-var handlebars = require('express-handlebars')
 
 app.use(express.static('public'));
 
