@@ -252,6 +252,10 @@ header {
   left:35%;
 }
 
+#imgCaption {
+  text-align: center;
+}
+
 #carouselBubbles {
   text-align: center;
   height: 50px;

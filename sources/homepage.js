@@ -60,6 +60,7 @@ function updateCarousel() {
 
     // Updates reference to previous active slide
     slidePhotoRef = slidePhoto;
+    document.getElementById("imgCaption").textContent = items[slidePhoto].alt;
 }
 
 function nextSlide(){
